@@ -1,0 +1,2 @@
+FLAG
+congratulations_your_xss_works

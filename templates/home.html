@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Announcement Board</title>
+</head>
+<body>
+    <h1>Announcements</h1>
+    <a href="/add">Add New Announcement</a>
+    <ul>
+        {% for post in posts %}
+        <li><strong>{{ post.author }}</strong>: {{ post.content | safe }}</li>
+        {% else %}
+        <li>No announcements yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
