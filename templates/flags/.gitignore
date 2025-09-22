@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Backup files
+*.bak
+* copy.py
+
+# Database file
+instance/database.db
+
+# Any JSON data files (if used locally)
+announcements.json
+
+# VS Code settings folder
+.vscode/
