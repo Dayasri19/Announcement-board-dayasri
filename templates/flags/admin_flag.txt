@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 FLAG{this_is_a_demo_flag}
+=======
+FLAG congratulations_your_xss_works
+>>>>>>> 26ff8fdbc9986812dcbda402b0a8a5e1b86d6e6c

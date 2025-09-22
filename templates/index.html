@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Announcement Board</title>
+</head>
+<body>
+    <h1>Announcements</h1>
+    <form action="/add" method="post">
+        <input type="text" name="author" placeholder="Author" required>
+        <input type="text" name="content" placeholder="Content" required>
+        <button type="submit">Add Announcement</button>
+    </form>
+    <hr>
+    {% for post in posts %}
+    <div style="margin-bottom:8px; padding:6px; border-bottom:1px solid #ddd;">
+        <strong>{{ post.author }}:</strong>
+        <span>{{ post.content|safe }}</span>
+        <form action="{{ url_for('delete_post', post_id=post.id) }}" method="post" style="display:inline; margin-left:12px;">
+            <button type="submit" onclick="return confirm('Delete this announcement?')">Delete</button>
+        </form>
+    </div>
+    {% else %}
+    <p>No announcements yet.</p>
+    {% endfor %}
+</body>
+</html>
